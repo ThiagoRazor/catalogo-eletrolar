@@ -1,0 +1,166 @@
+@mixin display-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+
+
+    
+  .totalNavArea {
+    @include display-column;
+    background-color: #003d8e;
+    padding-top: 10px;
+    width: 100%;
+    z-index: 1;
+    top:0;
+    position: fixed;
+
+    .navArea1 {
+      min-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .logoArea {
+        @include flex-align;
+        cursor: pointer;
+
+  
+        img {
+          width: 160px;
+          height: 50px;
+        }
+      }
+  
+      .inputArea {
+        @include flex-align;
+
+  
+        input {
+          padding: 10px;
+          width: 200px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          background-color: #EBEBEB;
+          outline: none;
+          border: none;
+        }
+
+        .enterBtn{
+          border:0;
+          border-left: 1px solid #5c5c5c73;
+          padding:10px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          cursor: pointer;
+        }
+        .enterBtn:hover{
+          background-color: #ebebebd7;
+        }
+      }
+
+        
+    }
+
+    .navArea2{
+        nav ul {
+            
+            display: flex;
+            gap:50px;
+                
+                li{
+                    list-style: none;
+                    font-weight: bold;
+                    color: #fff;
+                    cursor: pointer;
+
+                    
+                }
+            }
+    }
+
+    @media (min-width: 500px) and (max-width: 880px){
+      .navArea1{
+        min-width: 685px;
+
+      }
+    }
+
+    @media (min-width: 490px) and (max-width: 709px){
+      .navArea1{
+        min-width: 460px;
+      }
+    }
+
+    @media (min-width: 300px) and (max-width: 490px){
+      .navArea1{
+        min-width: 320px;
+
+        .logoArea{
+          
+          img{
+            width:120px;
+            height:35px;
+          }
+        }
+        
+        .inputArea{
+
+          input{
+            width: 120px;
+          }
+        }
+      }
+    }
+
+  }
+  
+      .categoriesTotalArea{
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        background-color: #fff;
+        margin:auto;
+        position: fixed;
+        z-index: 1;
+        top:calc(0% + 110px);
+        left:calc(20%);
+        border: 1px solid #003d8e;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 0 20px #5c5c5c73;
+      
+      
+            .categoriesArea{
+              display: flex;
+              flex-wrap: wrap;
+              align-items: start;
+              justify-content: center;
+              padding: 10px;
+              gap:20px;
+              list-style: none;
+
+                li{
+                  cursor: pointer;
+                }:hover{
+                  color: #003d8e;
+                }
+              
+              
+            }
+          }
+
+          @media (min-width: 300px) and (max-width: 490px){
+            .categoriesTotalArea{
+              top:calc(0% + 100px);
+            }
+          }
